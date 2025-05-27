@@ -127,9 +127,12 @@ span {
     color: rgb(210, 125, 22);
     letter-spacing: 2px;
 }
-
+.homepage .col2{
+    margin-top: 5rem;
+}
 .homepage .col2 img {
-    height: 20rem;
+    
+    height: 30rem;
     border-radius: 50%;
     transition: 0.5s;
 }
