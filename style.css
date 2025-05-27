@@ -1,24 +1,30 @@
-
+/* RESET & GLOBAL STYLES */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: rgb(4, 4, 4);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-span{
+
+span {
     color: rgb(64, 135, 95);
     font-size: 4rem;
 }
 
+/* NAVBAR */
 .navbar {
     background-color: rgb(58, 37, 166);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 
 .navbar .container {
@@ -28,49 +34,52 @@ span{
 .navbar .row {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
 }
-.navbar .col2{
+
+.navbar .col2 {
     display: flex;
     justify-content: center;
 }
 
 .navbar .row ul {
     margin-top: 1.2rem;
-   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .navbar .row ul li {
     list-style: none;
     display: inline;
+    margin: 0 1rem;
 }
 
 .navbar .row ul li a {
     text-decoration: none;
-    
     color: aliceblue;
     padding: 8px;
-    margin-left: 2rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     opacity: 0.75;
-
-
 }
-.navbar .row ul li a:hover{
+
+.navbar .row ul li a:hover {
     opacity: 1;
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
-.navbar .navlogo img{
+
+.navbar .navlogo img {
     height: 3rem;
     width: 3rem;
-    border-radius: 100%;
+    border-radius: 50%;
 }
-.navbar .col3{
+
+.navbar .col3 {
     margin-top: 1.3rem;
     display: flex;
-    justify-content: end;
-
+    justify-content: flex-end;
 }
-.navbar .col3 a{
+
+.navbar .col3 a {
     text-decoration: none;
     background-color: aqua;
     color: blanchedalmond;
@@ -78,280 +87,276 @@ span{
     border-radius: 5px;
     font-family: 'Times New Roman', Times, serif;
 }
-.navbar .col3 a:hover{
-    background-color:rgb(58, 37, 166) ;
+
+.navbar .col3 a:hover {
+    background-color: rgb(58, 37, 166);
 }
 
-/* home page design */
-.homepage{
-    
+/* HOMEPAGE */
+.homepage {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-.homepage .container{
+
+.homepage .container {
     height: 100vh;
     width: 95%;
-
 }
-.homepage .row{
+
+.homepage .row {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    align-items: center;
 }
-.homepage .col1{
-    height: 95vh;
+
+.homepage .col1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.homepage h1{
+
+.homepage h1 {
     color: blanchedalmond;
     font-size: 3rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom:1.5rem;
-
+    margin-bottom: 1.5rem;
 }
-.homepage h2{
+
+.homepage h2 {
     color: rgb(210, 125, 22);
     letter-spacing: 2px;
-
-}
-.homepage .col2{
-    height: 95vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-
 }
 
 .homepage .col2 img {
     height: 20rem;
-     transition: 0.5s; 
-    border-radius: 100%; 
-    
+    border-radius: 50%;
+    transition: 0.5s;
+}
 
-}
 .homepage .col2 img:hover {
-    scale: 1.25;
+    transform: scale(1.25);
 }
-.aboutpage{
+
+/* ABOUT PAGE */
+.aboutpage {
     height: 80vh;
     background-color: rgb(48, 79, 105);
     padding: 50px;
 }
-.aboutpage h1{
+
+.aboutpage h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
 }
-.aboutpage .row{
+
+.aboutpage .row {
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
-.aboutpage .row .col1 p{
+
+.aboutpage .row .col1 p {
     background-color: rgb(113, 120, 118);
     padding: 15px;
     text-align: justify;
-    border-bottom-left-radius:45px;
-    border-top-right-radius:45px ;
-    
-
+    border-bottom-left-radius: 45px;
+    border-top-right-radius: 45px;
 }
-.aboutpage .row .col2 img{
+
+.aboutpage .row .col2 img {
     height: 20rem;
     width: 20rem;
-    border-radius: 100%;
+    border-radius: 50%;
     margin-left: 2rem;
 }
 
-/* education page */
-.myeducation h1{
+/* EDUCATION */
+.myeducation {
+    height: 100vh;
+    background-color: #8e8e8e;
+    padding: 50px;
+}
+
+.myeducation h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
 }
 
-.myeducation{
-    height: 100vh;
-    background-color: #8e8e8e;
-    padding: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
-.myeducation .container{
+.myeducation .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    overflow-x: auto;
 }
-caption h4{
+
+caption h4 {
     font-size: 1.5rem;
     margin: 5px;
-
 }
-th,td{
+
+table {
+    width: 100%;
+    border-collapse: collapse;
     text-align: center;
+}
+
+th, td {
     font-weight: bold;
     padding: 5px;
 }
-th{
-    width: 10rem;
 
-}
-tr:nth-child(odd){
-    background-color:  #000000;
+tr:nth-child(odd) {
+    background-color: #000;
     color: white;
 }
-tr:nth-child(even){
-    background-color: #ffffff;
-    color: rgb(0, 0,0);
+
+tr:nth-child(even) {
+    background-color: #fff;
+    color: #000;
 }
-/* my intership */
-.myinternship .container h1{
+
+/* INTERNSHIP */
+.myinternship {
+    padding: 10px 0px;
+    height: auto;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+}
+
+.myinternship .container {
+    width: 96%;
+}
+
+.myinternship .container h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 1.5rem;
 }
-.myinternship{
-    padding: 10px 0px;
-    height: 80vh;
-    background-color: #ebebeb;
-    display: flex;
-    justify-content: center;
 
-}
-.myinternship .container{
-    width: 96%;
-
-}
-.myinternship .row{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
+.myinternship .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
     margin-top: 5rem;
-    
-
 }
-.myinternship .certi{
+
+.myinternship .certi {
     height: 12rem;
-    width: 17rem;
     background-color: rgb(135, 1, 245);
     border-radius: 15px;
     box-shadow: 5px 5px 5px gray;
     display: flex;
     align-items: center;
     transition: 0.5s;
-
 }
-.myinternship .certicon{
+
+.myinternship .certicon {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 15px;
 }
 
-.myinternship .certi img{
-    height:3rem;
-    width:3rem;
-    margin-bottom: 1.6rem;
+.myinternship .certi img {
+    height: 3rem;
+    width: 3rem;
     margin-left: 6rem;
-    border-radius: 100%;
+    margin-bottom: 1.6rem;
+    border-radius: 50%;
 }
-.myinternship .certi h1{
+
+.myinternship .certi h1 {
     font-size: 0.7rem;
-    margin-bottom: 2px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
-.col{
-    margin-right: .6rem;
+
+.myinternship .certi:hover {
+    transform: scale(1.1);
 }
-.myinternship .certi:hover{
-    scale: 1.1;
-}
-.myinternship .certi:hover img{
-    scale: 1.7;
-    rotate: 10deg;
+
+.myinternship .certi:hover img {
+    transform: scale(1.7) rotate(10deg);
     transition: 0.7s ease-in-out;
-
 }
-/* contact us */
 
-.contactus{
-    height: 80vh;
-    background-color: #ffffff;
+/* CONTACT US */
+.contactus {
+    height: auto;
+    background-color: #fff;
     padding: 50px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-.contactus h1{
+
+.contactus h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
 }
-.contactus .container{
-    width: 958%;
+
+.contactus .container {
+    width: 95%;
 }
-.contactus .container .row{
+
+.contactus .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-.contactus form{
-    height: 60VH;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #4a90e2;
-    border-radius: 15px;
-}
-.contactus form label {
-font-size: 1rem;
-text-align: center;
-margin-left: 4rem;
-font-family: cursive;
-
-}
-.contactus form input,textarea{
-    border: none;
-    height: 2rem;
-    width: 20rem;
-    border-radius: 15px;
-    text-align: center;
-    margin: 0.5rem;
-
-}
-textarea{
-    padding: 2px;
-
-}
-.contactus button{
-    padding: 10px 20px;
-
-border: none;
-border-radius: 15px;
-
-}
-.contactus img{
-    height: 20rem;
-}
-.contactus .col2{
-    display: flex;
-    justify-content: center;
-
-}
-.contactus .container .row{
+    gap: 2rem;
     padding: 20px;
 }
 
+.contactus form {
+    background-color: #4a90e2;
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-/* RESPONSIVE DESIGN */
+.contactus form label {
+    font-size: 1rem;
+    font-family: cursive;
+    margin-bottom: 0.5rem;
+}
 
-/* Medium Devices (Tablets) */
+.contactus form input,
+.contactus form textarea {
+    border: none;
+    width: 100%;
+    max-width: 20rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.contactus button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.contactus img {
+    height: 20rem;
+    width: auto;
+}
+
+.contactus .col2 {
+    display: flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Tablets */
 @media (max-width: 992px) {
     .navbar .row {
         grid-template-columns: 1fr;
@@ -359,27 +364,17 @@ border-radius: 15px;
     }
 
     .navbar .col2 ul {
-        display: flex;
         flex-direction: column;
         margin-top: 0.5rem;
     }
 
-    .navbar .col2 ul li {
-        margin-bottom: 0.5rem;
-    }
-
-    .homepage .row {
+    .homepage .row,
+    .aboutpage .row {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .aboutpage .row {
-        grid-template-columns: 1fr;
-    }
-
     .aboutpage .row .col2 {
-        display: flex;
-        justify-content: center;
         margin-top: 1rem;
     }
 
@@ -389,25 +384,18 @@ border-radius: 15px;
 
     .myinternship .row {
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    .myinternship {
-        height: auto;
     }
 
     .contactus .row {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .contactus .col2 {
-        display: flex;
-        justify-content: center;
         margin-top: 1rem;
     }
 }
 
-/* Small Devices (Mobiles) */
+/* Mobiles */
 @media (max-width: 576px) {
     .navbar {
         flex-direction: column;
@@ -423,8 +411,10 @@ border-radius: 15px;
         font-size: 2rem;
     }
 
-    .homepage .col2 img {
+    .homepage .col2 img,
+    .aboutpage .row .col2 img {
         height: 12rem;
+        width: 12rem;
     }
 
     .aboutpage h1,
@@ -434,29 +424,159 @@ border-radius: 15px;
         font-size: 2rem;
     }
 
-    .myinternship .row {
-        grid-template-columns: 1fr;
-    }
-
-    .aboutpage .row .col2 img {
-        height: 12rem;
-        width: 12rem;
-    }
-
     table {
         font-size: 0.8rem;
-    }
-
-    th, td {
-        padding: 3px;
-    }
-
-    .certi {
-        width: 100%;
     }
 
     .navbar .col3 {
         justify-content: center;
         margin-top: 1rem;
+    }
+}
+/* Mobiles */
+@media (max-width: 576px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        padding: 1rem 0;
+    }
+
+    .navbar .row {
+        grid-template-columns: 1fr;
+        text-align: center;
+        row-gap: 1rem;
+    }
+
+    .navbar .col2 ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar .col2 ul li {
+        margin: 0.5rem 0;
+    }
+
+    .navbar .col3 {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    /* Homepage */
+    .homepage .container {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .homepage .row {
+        grid-template-columns: 1fr;
+        text-align: center;
+        row-gap: 1.5rem;
+    }
+
+    .homepage .col1 h1 {
+        font-size: 2rem;
+    }
+
+    .homepage .col2 img {
+        height: 12rem;
+        width: 12rem;
+    }
+
+    /* About Page */
+    .aboutpage {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .aboutpage .row {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .aboutpage .row .col2 img {
+        margin-left: 0;
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .aboutpage .row .col1 p {
+        font-size: 0.9rem;
+    }
+
+    /* Education */
+    .myeducation {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.75rem;
+    }
+
+    th, td {
+        padding: 0.3rem;
+    }
+
+    caption h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Internship */
+    .myinternship .row {
+        grid-template-columns: 1fr;
+    }
+
+    .myinternship .certi {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .myinternship .certi img {
+        margin: 0 0 1rem 0;
+    }
+
+    .myinternship .certi h1 {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    /* Contact Us */
+    .contactus {
+        padding: 2rem 1rem;
+    }
+
+    .contactus .row {
+        grid-template-columns: 1fr;
+    }
+
+    .contactus .col2 {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .contactus img {
+        height: 12rem;
+    }
+
+    .contactus form {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contactus form input,
+    .contactus form textarea {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .contactus button {
+        width: 100%;
+        padding: 0.7rem;
     }
 }
